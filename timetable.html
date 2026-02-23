@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>กำหนดการอบรมครูสอนพระปริยัติธรรม แผนกธรรม</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Sarabun', sans-serif; background-color: #f3f4f6; }
+        
+        /* ตั้งค่าสำหรับพิมพ์ลงกระดาษ A4 แนวนอน */
+        @page {
+            size: A4 landscape;
+            margin: 4mm;
+        }
+        
+        @media print {
+            .no-print { display: none !important; }
+            body { 
+                -webkit-print-color-adjust: exact !important; 
+                print-color-adjust: exact !important;
+                background-color: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                line-height: 1.1 !important;
+            }
+            .max-w-[1400px] {
+                max-width: 100% !important;
+                border: none !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+            }
+            th { padding: 2px !important; font-size: 0.65rem !important; }
+            td { padding: 2px 4px !important; font-size: 0.65rem !important; }
+            .text-xs { font-size: 0.55rem !important; }
+            .text-sm { font-size: 0.6rem !important; }
+            .text-[0.95rem] { font-size: 0.65rem !important; }
+            .text-lg { font-size: 0.75rem !important; }
+            .text-2xl { font-size: 0.95rem !important; }
+            .text-3xl { font-size: 1.15rem !important; }
+            ul { margin-left: 10px !important; margin-bottom: 0 !important; }
+            ul.custom-list li { padding-left: 0 !important; margin-bottom: 0 !important; }
+            .space-y-1.5 > :not([hidden]) ~ :not([hidden]) { margin-top: 0 !important; }
+            .mt-1, .mt-2, .mt-3, .mt-4 { margin-top: 1px !important; }
+            .mb-2, .mb-4 { margin-bottom: 1px !important; }
+            .my-3 { margin-top: 1px !important; margin-bottom: 1px !important; }
+            .gap-1\.5 { gap: 2px !important; }
+            .px-2\.5 { padding-left: 0 !important; padding-right: 0 !important; }
+            .py-1, .py-0\.5 { padding-top: 0 !important; padding-bottom: 0 !important; }
+            table { min-width: 100% !important; border-collapse: collapse !important;}
+            .p-6, .md\:p-8 { padding: 4px 8px !important; }
+            .p-4 { padding: 2px !important; }
+            .border-b-\[6px\] { border-bottom-width: 2px !important; }
+            hr { border-width: 1px !important; margin: 1px 0 !important; }
+            .inline-flex { 
+                display: block !important; 
+                border: none !important; 
+                background: transparent !important; 
+                padding: 0 !important;
+                margin-top: 1px !important;
+            }
+            .inline-block.px-2.py-0\.5 {
+                padding: 0 !important;
+                background: transparent !important;
+            }
+        }
+
+        /* ตกแต่ง List ให้สวยงาม */
+        ul.custom-list { list-style-type: disc; margin-left: 1.25rem; }
+        ul.custom-list li { padding-left: 0.25rem; }
+        
+        /* ปรับแต่ง Scrollbar แนวนอนสำหรับมือถือ */
+        .overflow-x-auto::-webkit-scrollbar { height: 8px; }
+        .overflow-x-auto::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        .overflow-x-auto::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 4px; }
+        .overflow-x-auto::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+    </style>
+</head>
+<body class="p-2 sm:p-4 md:p-8">
+
+    <div id="capture-area" class="max-w-[1400px] mx-auto bg-white shadow-2xl rounded-xl overflow-hidden border border-gray-200">
+        <!-- Header Section -->
+        <div class="p-5 md:p-8 bg-gradient-to-r from-[#5a2403] to-[#8b3d09] text-white flex flex-col xl:flex-row justify-between items-start xl:items-center border-b-[6px] border-yellow-500 gap-4">
+            <div class="flex-1 w-full">
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 drop-shadow-md tracking-wide leading-snug">โครงการอบรมครูสอนพระปริยัติธรรม แผนกธรรม</h1>
+                <p class="mt-2 text-base sm:text-lg text-yellow-50 font-medium">เพื่อขึ้นบัญชี สังกัดสำนักงานแม่กองธรรมสนามหลวง (หลักสูตรเข้มข้น 5 วัน)</p>
+                <div class="mt-4 inline-flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm bg-black/20 px-3 py-2 rounded-lg border border-white/10 w-full sm:w-auto">
+                    <span class="flex items-center gap-1.5 whitespace-nowrap"><span class="text-base">🗓️</span> 12 - 16 มี.ค. 69</span>
+                    <span class="hidden sm:inline text-yellow-500">|</span>
+                    <span class="flex items-center gap-1.5"><span class="text-base">📍</span> วัดศรีรัตนธรรมาราม อ.บางพลี จ.สมุทรปราการ</span>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 w-full xl:w-auto action-buttons no-print mt-2 xl:mt-0">
+                <!-- ปุ่มบันทึกเป็น JPEG -->
+                <button onclick="downloadJPEG()" class="flex-1 sm:flex-none bg-green-600 text-white px-4 py-3 sm:py-2.5 rounded-lg font-bold hover:bg-green-500 transition shadow-lg flex items-center justify-center gap-2 active:scale-95">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                    <span id="btn-text">บันทึกรูป (JPEG)</span>
+                </button>
+                <!-- ปุ่มพิมพ์ -->
+                <button onclick="window.print()" class="flex-1 sm:flex-none bg-yellow-500 text-yellow-950 px-4 py-3 sm:py-2.5 rounded-lg font-bold hover:bg-yellow-400 transition shadow-lg flex items-center justify-center gap-2 active:scale-95">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" clip-rule="evenodd" />
+                    </svg>
+                    พิมพ์ตาราง
+                </button>
+            </div>
+        </div>
+
+        <!-- แจ้งเตือนการเลื่อนตารางสำหรับมือถือ (แสดงเฉพาะหน้าจอเล็ก) -->
+        <div class="lg:hidden bg-blue-50 text-blue-700 text-center py-2 text-sm font-medium border-b border-blue-100 flex items-center justify-center gap-2 animate-pulse no-print">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+            เลื่อนซ้าย-ขวา เพื่อดูตารางทั้งหมด
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+        </div>
+
+        <!-- Table Section -->
+        <div class="overflow-x-auto bg-white">
+            <table class="w-full text-left border-collapse min-w-[1000px] lg:min-w-[1200px]">
+                <thead>
+                    <tr class="bg-gray-800 text-white text-xs sm:text-sm">
+                        <th class="p-3 sm:p-4 border border-gray-700 w-[10%] text-center align-middle whitespace-nowrap">วัน/เดือน/ปี</th>
+                        <th class="p-3 sm:p-4 border border-gray-700 w-[8%] text-center align-middle text-gray-300">07.00 - 08.00<br><span class="text-white mt-1 block">ลงทะเบียน</span></th>
+                        <th class="p-3 sm:p-4 border border-gray-700 w-[20%] text-center align-middle">08.30 - 11.00<br><span class="text-yellow-400 font-bold mt-1 block tracking-wide">(ภาควิชาการ)</span></th>
+                        <th class="p-2 sm:p-4 border border-gray-700 w-[6%] text-center align-middle text-gray-400 leading-tight">11.00 - 12.30<br><span class="mt-1 block">พักเพล</span></th>
+                        <th class="p-3 sm:p-4 border border-gray-700 w-[20%] text-center align-middle">13.00 - 15.00<br><span class="text-yellow-400 font-bold mt-1 block tracking-wide">(ภาคปฏิบัติ)</span></th>
+                        <th class="p-2 sm:p-4 border border-gray-700 w-[6%] text-center align-middle text-gray-400 leading-tight">15.00 - 15.30<br><span class="mt-1 block">พักเบรค</span></th>
+                        <th class="p-3 sm:p-4 border border-gray-700 w-[20%] text-center align-middle">15.30 - 17.30<br><span class="text-yellow-400 font-bold mt-1 block tracking-wide">(สรุป/พรีเซนต์)</span></th>
+                        <th class="p-3 sm:p-4 border border-gray-700 w-[10%] text-center align-middle text-gray-300">17.30 น.<br><span class="text-white mt-1 block">ก่อนกลับ</span></th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-800 text-sm sm:text-[0.95rem] align-top">
+                    
+                    <!-- วันที่ 1 (พฤหัส) -->
+                    <tr class="bg-orange-50/50 hover:bg-orange-100/80 transition duration-150">
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center font-bold text-orange-900 shadow-sm">
+                            <div class="text-base sm:text-lg">พฤหัสบดี</div>
+                            <div class="font-normal text-orange-700 mt-1 text-xs sm:text-base">12 มี.ค.</div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center align-middle text-gray-600 font-medium">ลงทะเบียน</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list space-y-1.5 font-medium text-gray-800">
+                                <li>ปฐมนิเทศ / Pre-test</li>
+                                <li>บรรยาย: จิตวิทยาครูพระ</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-orange-100 text-orange-800 border border-orange-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: พระพรหมบัณฑิต
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center bg-gray-100/80 align-middle text-2xl sm:text-3xl shadow-inner" title="พักฉันภัตตาหารเพล">🍽️</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <div class="mb-3 sm:mb-4">
+                                <div class="font-bold text-orange-900 bg-orange-100 inline-block px-2 py-0.5 rounded text-xs sm:text-sm mb-2">13.00-13.30 น.</div>
+                                <ul class="custom-list font-medium text-gray-800">
+                                    <li>พิธีเปิดโครงการ (จุดธูปเทียน, กล่าวรายงาน)</li>
+                                </ul>
+                            </div>
+                            <hr class="my-2 sm:my-3 border-gray-200">
+                            <div>
+                                <div class="font-bold text-orange-900 bg-orange-100 inline-block px-2 py-0.5 rounded text-xs sm:text-sm mb-2">13.30-15.00 น.</div>
+                                <ul class="custom-list font-medium text-gray-800">
+                                    <li>วิชาเรียงความแก้กระทู้</li>
+                                    <li>การฝึกตรวจแก้กระทู้ธรรม</li>
+                                </ul>
+                                <div class="mt-3 inline-flex items-center gap-1.5 bg-orange-100 text-orange-800 border border-orange-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                    <span>🎤</span> วิทยากร: พระเทพปฏิภาณมุนี
+                                </div>
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center bg-gray-100/80 align-middle text-2xl sm:text-3xl shadow-inner" title="พักเบรค">☕</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list font-medium text-gray-800 space-y-1.5">
+                                <li>นำเสนอผลงานกลุ่ม (พรีเซนต์)</li>
+                                <li>สรุปการสอนวิชากระทู้ธรรม</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-orange-100 text-orange-800 border border-orange-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: พระเทพปฏิภาณมุนี
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center align-middle text-gray-600 font-medium">เซ็นชื่อ</td>
+                    </tr>
+
+                    <!-- วันที่ 2 (ศุกร์) -->
+                    <tr class="bg-blue-50/50 hover:bg-blue-100/80 transition duration-150">
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center font-bold text-blue-900 shadow-sm">
+                            <div class="text-base sm:text-lg">ศุกร์</div>
+                            <div class="font-normal text-blue-700 mt-1 text-xs sm:text-base">13 มี.ค.</div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center align-middle text-gray-600 font-medium">ลงทะเบียน</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list space-y-1.5 font-medium text-gray-800">
+                                <li>บรรยายวิชา ธรรมวิภาค และ คิหิปฏิบัติ</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-100 text-blue-800 border border-blue-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: พระราชบัณฑิต
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center bg-gray-100/80 align-middle text-2xl sm:text-3xl shadow-inner">🍽️</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list space-y-1.5 font-medium text-gray-800">
+                                <li>แบ่งกลุ่ม สาธิตการออกข้อสอบ</li>
+                                <li>เฉลยวิชาธรรมวิภาค</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-100 text-blue-800 border border-blue-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: พระราชบัณฑิต
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center bg-gray-100/80 align-middle text-2xl sm:text-3xl shadow-inner" title="พักเบรค">☕</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list font-medium text-gray-800 space-y-1.5">
+                                <li>นำเสนอผลงานกลุ่ม (พรีเซนต์)</li>
+                                <li>สรุปการสอนวิชาธรรมวิภาค</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-blue-100 text-blue-800 border border-blue-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: พระราชบัณฑิต
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center align-middle text-gray-600 font-medium">เซ็นชื่อ</td>
+                    </tr>
+
+                    <!-- วันที่ 3 (เสาร์) -->
+                    <tr class="bg-purple-50/50 hover:bg-purple-100/80 transition duration-150">
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center font-bold text-purple-900 shadow-sm">
+                            <div class="text-base sm:text-lg">เสาร์</div>
+                            <div class="font-normal text-purple-700 mt-1 text-xs sm:text-base">14 มี.ค.</div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center align-middle text-gray-600 font-medium">ลงทะเบียน</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list space-y-1.5 font-medium text-gray-800">
+                                <li>วินัยบัญญัติ</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-purple-100 text-purple-800 border border-purple-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: พระราชวัชรเมธี
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center bg-gray-100/80 align-middle text-2xl sm:text-3xl shadow-inner">🍽️</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list space-y-1.5 font-medium text-gray-800">
+                                <li>Workshop: วินัยมุข & Case Study</li>
+                                <li>สาธิตการออกข้อสอบ และเฉลยวินัย</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-purple-100 text-purple-800 border border-purple-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: กองวิชาการ
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center bg-gray-100/80 align-middle text-2xl sm:text-3xl shadow-inner" title="พักเบรค">☕</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list font-medium text-gray-800 space-y-1.5">
+                                <li>นำเสนอผลงานกลุ่ม (พรีเซนต์)</li>
+                                <li>สรุปการสอนวิชาวินัยบัญญัติ</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-purple-100 text-purple-800 border border-purple-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: กองวิชาการ
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center align-middle text-gray-600 font-medium">เซ็นชื่อ</td>
+                    </tr>
+
+                    <!-- วันที่ 4 (อาทิตย์) -->
+                    <tr class="bg-red-50/50 hover:bg-red-100/80 transition duration-150">
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center font-bold text-red-900 shadow-sm">
+                            <div class="text-base sm:text-lg">อาทิตย์</div>
+                            <div class="font-normal text-red-700 mt-1 text-xs sm:text-base">15 มี.ค.</div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center align-middle text-gray-600 font-medium">ลงทะเบียน</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list space-y-1.5 font-medium text-gray-800">
+                                <li>พุทธประวัติ & ศาสนพิธี</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-red-100 text-red-800 border border-red-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: พระธรรมวชิรปัญญาภรณ์
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center bg-gray-100/80 align-middle text-2xl sm:text-3xl shadow-inner">🍽️</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list space-y-1.5 font-medium text-gray-800">
+                                <li>สาธิตการออกข้อสอบ และเฉลย</li>
+                                <li>สื่อทำมือ / สื่อดิจิทัล Canva</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-red-100 text-red-800 border border-red-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: พระราชวชิรปฏิภาณ
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center bg-gray-100/80 align-middle text-2xl sm:text-3xl shadow-inner" title="พักเบรค">☕</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list font-medium text-gray-800 space-y-1.5">
+                                <li>นำเสนอผลงานกลุ่ม (พรีเซนต์)</li>
+                                <li>สรุปการสอนวิชาพุทธประวัติ</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-red-100 text-red-800 border border-red-200 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: พระราชวชิรปฏิภาณ
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center align-middle text-gray-600 font-medium">เซ็นชื่อ</td>
+                    </tr>
+
+                    <!-- วันที่ 5 (จันทร์) -->
+                    <tr class="bg-yellow-50/50 hover:bg-yellow-100/80 transition duration-150">
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center font-bold text-yellow-900 shadow-sm">
+                            <div class="text-base sm:text-lg">จันทร์</div>
+                            <div class="font-normal text-yellow-700 mt-1 text-xs sm:text-base">16 มี.ค.</div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center align-middle text-gray-600 font-medium">ลงทะเบียน</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list space-y-1.5 font-medium text-gray-800">
+                                <li>Workshop: การออกแบบการเรียนการสอน</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-yellow-100 text-yellow-800 border border-yellow-300 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span> วิทยากร: อ.เทียนดนัย
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center bg-gray-100/80 align-middle text-2xl sm:text-3xl shadow-inner">🍽️</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list space-y-1.5 font-medium text-gray-800">
+                                <li>สอบ Post-test (ฝ่ายวัดผล)</li>
+                                <li>ฝึกซ้อมรับประกาศนียบัตร</li>
+                            </ul>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center bg-gray-100/80 align-middle text-2xl sm:text-3xl shadow-inner" title="พักเบรค">☕</td>
+                        <td class="p-3 sm:p-4 border border-gray-300">
+                            <ul class="custom-list font-medium text-gray-800 space-y-1.5">
+                                <li>พิธีปิด / มอบใบประกาศนียบัตร</li>
+                            </ul>
+                            <div class="mt-3 inline-flex items-center gap-1.5 bg-yellow-100 text-yellow-800 border border-yellow-300 px-2 sm:px-2.5 py-1 rounded-md text-[0.65rem] sm:text-xs font-semibold leading-tight">
+                                <span>🎤</span>ประธานในพิธี
+                            </div>
+                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 text-center align-middle text-yellow-800 font-bold bg-yellow-100/30">รับใบประกาศนียบัตร<br>เดินทางกลับ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer / Remarks -->
+        <div class="p-5 sm:p-6 bg-gray-50 border-t border-gray-200 text-xs sm:text-[0.9rem] text-gray-600 leading-relaxed">
+            <div class="flex flex-col md:flex-row gap-4 justify-between items-start">
+                <div>
+                    <p class="font-bold text-gray-800 mb-2 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" /></svg>
+                        หมายเหตุ:
+                    </p>
+                    <ul class="custom-list space-y-1">
+                        <li>กรุณาลงชื่อเข้ารับการอบรมในช่วงเช้า (เวลา 07.00 - 08.00 น.) และลงชื่อหลังเลิกอบรมทุกวัน</li>
+                        <li>กำหนดการนี้อาจมีการเปลี่ยนแปลงตามความเหมาะสมของเวลาและสถานการณ์</li>
+                    </ul>
+                </div>
+                <div class="text-[0.65rem] sm:text-xs text-gray-400 self-start md:self-end mt-2 md:mt-0">
+                    ปรับปรุงข้อมูลล่าสุดเมื่อ: กุมภาพันธ์ 2569
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- สคริปต์สำหรับบันทึกเป็นรูปภาพ JPEG -->
+    <script>
+        function downloadJPEG() {
+            const actionButtons = document.querySelector('.action-buttons');
+            const swipeIndicator = document.querySelector('.animate-pulse');
+            const btnText = document.getElementById('btn-text');
+            const originalText = btnText.innerText;
+            
+            // เปลี่ยนข้อความปุ่ม
+            btnText.innerText = 'กำลังประมวลผล...';
+            
+            setTimeout(() => {
+                // ซ่อนปุ่มและข้อความเตือนเลื่อนนิ้วก่อนแคปรูป
+                actionButtons.style.display = 'none';
+                if(swipeIndicator) swipeIndicator.style.display = 'none';
+                
+                const captureArea = document.getElementById('capture-area');
+                
+                // ตรวจสอบขนาดหน้าจอเพื่อปรับความละเอียดภาพให้เหมาะสม ลดการเด้งบนมือถือ
+                const isMobile = window.innerWidth < 768;
+                const ratio = isMobile ? 1.5 : 2; 
+                
+                htmlToImage.toJpeg(captureArea, {
+                    quality: 0.95,
+                    backgroundColor: '#ffffff',
+                    pixelRatio: ratio
+                }).then(function (dataUrl) {
+                    // แสดงองค์ประกอบกลับคืนมา
+                    actionButtons.style.display = 'flex';
+                    if(swipeIndicator) swipeIndicator.style.display = 'flex';
+                    btnText.innerText = originalText;
+                    
+                    // สร้างลิงก์ดาวน์โหลด
+                    const link = document.createElement('a');
+                    link.download = 'ตารางอบรมครูสอนพระปริยัติธรรม.jpg';
+                    link.href = dataUrl;
+                    link.click();
+                }).catch(function (error) {
+                    console.error("เกิดข้อผิดพลาดในการสร้างรูปภาพ: ", error);
+                    // แสดงองค์ประกอบกลับคืนมาเมื่อเกิด Error
+                    actionButtons.style.display = 'flex';
+                    if(swipeIndicator) swipeIndicator.style.display = 'flex';
+                    btnText.innerText = originalText;
+                    
+                    alert("อุปกรณ์หรือเบราว์เซอร์นี้ไม่รองรับการแปลงรูปภาพอัตโนมัติ กรุณาใช้วิธี 'แคปหน้าจอ' หรือกด 'พิมพ์ตาราง' เพื่อเซฟเป็น PDF แทนครับ");
+                });
+            }, 100);
+        }
+    </script>
+</body>
+</html>
